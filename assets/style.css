@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #EBDF63;
+}
+
+*::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: #EBDF63;
+    border-radius: 1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: .2rem;
+    border: .3rem solid #EBDF63;
+    border-radius: 1rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.4rem;
+    background: linear-gradient(180deg, #6F91EA 0%, #00DEEC 100%, rgba(0, 222, 236, 0) 100%);
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    color: #EBDF63;
+    font-weight: 700;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: calc(100vw - 50vw);
+    max-height: calc(100vh - 50vh);
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    outline: none;
+    background-color: #7c773d;
+    border: 0.3rem solid #EBDF63;
+    width: calc(100% - 30%);
+    height: 2.9rem;
+    border-radius: 1.45rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0rem 0.5rem;
+}
+
+#add {
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background: rgba(217, 217, 217, 0.13);
+    border: 0.2rem solid #EBDF63;
+    color: #EBDF63;
+    border-radius: 1.25rem;
+    padding: 0rem 0.5rem;
+    margin-top: 1rem;
+}
+
+#add:hover {
+    background-color: #fff;
+    color: #EBDF63;
+    border: #fff;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: calc(100% - 20%);
+    width: calc(100vw - 10vw);
+}
+
+#tarefas {
+    overflow: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #EBDF63;
+    margin: 1rem 0rem;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+li {
+    padding: 0rem 1rem;
+    width: 80%;
+    font-weight: 700;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.box_tarefas {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.disable {
+    width: 2.7rem;
+    height: 2.6rem;
+    border: .3rem solid #EBDF63;
+    border-radius: 1.3rem;
+}
+
+.disable:hover {
+    cursor: pointer;
+    background-color: #EBDF63;
+}
+
+.realizado {
+    width: 2.7rem;
+    height: 2.6rem;
+    border: .3rem solid #EBDF63;
+    border-radius: 1.3rem;
+    background-color: #EBDF63;
+    cursor: pointer;
+}
+
+.feito {
+    text-decoration: line-through;
+    color: #fff;
+}
+
+.delete-tarefa {
+    display: flex;
+    width: 6.3rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background: rgba(217, 217, 217, 0.13);
+    border: .2rem solid #EBDF63;
+    color: #EBDF63;
+    border-radius: 1.25rem;
+}
+
+.delete-tarefa:hover {
+    background-color: #fff;
+    color: #EBDF63;
+    border: #fff;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background-color: #6F91EA;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.svgs {
+    width: 3.4rem;
+    height: 3.4rem;
+    fill: #fff;
+}
+
+.svgs:hover {
+    fill: #EBDF63;
+}
+
+@media (max-width:1020px) {
+    main {
+        flex-direction: column;
+    }
+}

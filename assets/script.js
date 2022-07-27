@@ -12,16 +12,17 @@ const removerTarefa = ID => {
 }
 
 const tarefas = adicionar => {
-    const li = document.createElement('li'); // embocando uma tag li
+    const div = document.createElement('div'); // embocando uma tag li
     const dado = adicionar.tarefas;
 
-    li.innerHTML = `
+    div.innerHTML = `
     <span onclick="feito(this)" class="disable"></span>
-    ${dado}
-    <button onclick="removerTarefa(${adicionar.id})" class="delete-tarefa">x</button>
-    `;
+    <li>${dado}</li>
+    <button onclick="removerTarefa(${adicionar.id})" class="delete-tarefa">
+    X</button>`;
+    div.classList.add('box_tarefas');
 
-    ul.append(li);
+    ul.append(div);
 }
 
 const init = () => {
@@ -53,3 +54,17 @@ function adicionar(event) {
     updateLocalStorage();
     input.value = '';
 };
+
+function feito(elemento) {
+    const div = elemento.parentElement;
+    if (elemento.classList.contains('disable')) {
+        elemento.classList.remove('disable');
+        elemento.classList.add('realizado');
+        div.classList.add('feito');
+    }
+    else {
+        elemento.classList.remove('realizado');
+        elemento.classList.add('disable');
+        div.classList.remove('feito');
+    }
+}
