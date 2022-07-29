@@ -32,6 +32,7 @@ body {
     height: 100vh;
     font-size: 1.4rem;
     background: linear-gradient(180deg, #6F91EA 0%, #00DEEC 100%, rgba(0, 222, 236, 0) 100%);
+    position: relative;
 }
 
 
@@ -40,7 +41,7 @@ header {
     justify-content: center;
     color: #EBDF63;
     font-weight: 700;
-    padding: 30px;
+    padding: 3rem;
 }
 
 h1 {
@@ -212,5 +213,12 @@ a {
 @media (max-width:1020px) {
     main {
         flex-direction: column;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
     }
 }
